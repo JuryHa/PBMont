@@ -52,7 +52,7 @@ products.forEach((product) => {
 
 accordions.forEach(accordion => {
     accordion.addEventListener('click', event => {
-        const accordion = accordion.parentElement;
+        const tile = accordion.parentElement;
         const info = accordion.nextElementSibling;
         // const activeTile = document.querySelector('.tile.active');
         // if (activeTile && activeTile !== tile) {
@@ -60,8 +60,8 @@ accordions.forEach(accordion => {
         //     activeTile.nextElementSibling.style.maxHeight = 0;
         // }
 
-        accordion.classList.toggle('active');
-        if (accordion.classList.contains('active')) {
+        tile.classList.toggle('active');
+        if (tile.classList.contains('active')) {
             info.style.maxHeight = info.scrollHeight + 15 + 'px';
             info.style.marginTop = "1rem";
         } else {
