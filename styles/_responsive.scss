@@ -1,0 +1,228 @@
+/* RESPONSIVE */
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    #main .stats {
+        justify-content: center;
+
+        .stat {
+            width: 100%;
+        }
+
+        span {
+            font-size: 36px;
+        }
+
+        b {
+            font-size: 48px;
+        }
+    }
+
+    #how-to-decide .grid__columns .wrapper:nth-child(2) {
+        grid-row: 1;
+    }
+
+    .grid__columns {
+        grid-template-columns: 1fr;
+    }
+
+    .images__group {
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        img {
+            position: relative;
+            transform: none;
+            width: 50%;
+            top: 0;
+            left: 0;
+
+            &:nth-child(2) {
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    footer {
+        .contact {
+            .card {
+                padding: 1rem;
+
+                .inner {
+                    flex-direction: column;
+                }
+
+                img {
+                    max-width: 2rem;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .calculator__step .calculator__products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    nav {
+        padding: 1rem;
+        min-height: 4rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        z-index: 50;
+
+        img {
+            margin-right: auto;
+            position: absolute;
+            top: 1rem;
+            height: 32px;
+        }
+
+        ul {
+            height: 100%;
+            overflow: hidden;
+            margin-top: 4rem;
+            top: 4rem;
+            background: $color_default_dark;
+            width: 100%;
+            left: 0;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem 2rem;
+            border-radius: $br_medium;
+            gap: 4rem;
+            display: none;
+
+            &.visible {
+                display: flex;
+            }
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            right: 1rem;
+            top: 1.25rem;
+        }
+    }
+
+    .container {
+        padding: 1rem 2rem;
+    }
+
+    #main .stats {
+        span {
+            font-size: 24px;
+        }
+
+        b {
+            font-size: 28px;
+        }
+    }
+
+    footer {
+        >.container {
+            padding: 4rem 2rem;
+        }
+
+        .top {
+            grid-template-columns: 1fr;
+        }
+
+        .company {
+            place-content: flex-start;
+        }
+    }
+
+    #products .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .calculator__step .calculator__products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    section {
+        padding: 2rem 0 4rem;
+    }
+
+    #main .stats {
+        flex-direction: column;
+    }
+
+    .images__group {
+        height: 400px;
+
+        img {
+            position: absolute;
+
+            &:nth-child(1) {
+                box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3);
+            }
+
+            &:nth-child(2) {
+                top: 25%;
+                right: 5%;
+                left: auto;
+                z-index: 10;
+            }
+        }
+    }
+
+    footer {
+        .top {
+            .wrapper {
+                flex-direction: column;
+            }
+        }
+    }
+
+    #products .container {
+        grid-template-columns: 1fr
+    }
+
+    .calculator__accordion .info {
+        .row {
+            flex-direction: column;
+        }
+
+        .wrapper {
+            width: 100%;
+        }
+
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // .calculator__step .calculator__products {
+    //     grid-template-columns: 1fr;
+    // }
+}

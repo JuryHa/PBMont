@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt | PBMont</title>
+    <title>Rekapitulácia | PBMont</title>
     <link rel="shortcut icon" href="assets/images/logo_pbMont.svg" type="image/x-icon">
-    <link href="http://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -30,26 +30,65 @@
         </div>
     </header>
 
-    <main>
+    <main id="calculator">
         <section id="breadcrumbs" class="colorful">
             <div class="container grid__columns">
-                <h1>Kontakt</h1>
-                <span>Domov <img src="assets/icons/icon_arrow_right_orange.svg" alt=""><b>Kontakt</b></span>
+                <h1>Predbežná kalkulácia</h1>
+                <span>Domov <img src="assets/icons/icon_arrow_right_orange.svg" alt=""><b>Kalkulácia</b></span>
             </div>
         </section>
+
         <section>
             <div class="container">
-                <form method="post" action="mailSend.php">
-
-
-                    <textarea name="message"></textarea>
-
-
-                    <input type="submit">
-
-
-                </form>
-            </div>
+                <div class="recap">
+                    <span>Rekapitulácia</span>
+                    <h2>Orientačná cenová ponuka</h2>
+                    <div class="wrapper">
+                        <h3>Typ oplotenia:</h3>
+                        <span>Hugo</span>
+                        <h3>Farba oplotenia:</h3>
+                        <span>Vzorkovník PAL</span>
+                    </div>
+                    <div class="wrapper">
+                        <h3>Brána:</h3>
+                        <div class="grid">
+                            <b>Počet kusov:</b>
+                            <span id="gate1count">1</span>
+                            <b>Výška:</b>
+                            <span id="gate1height">1</span>
+                            <b>Šírka</b>
+                            <span id="gate1width">1</span>
+                            <b>typ brány:</b>
+                            <span id="gate1type">1</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="grid">
+                            <h3>Cena spolu:</h3>
+                            <h3>€</h3>
+                        </div>
+                    </div>
+                    <form class="wrapper" method="post" action="mailSend.php">
+                        <h3>Kontaktujte ma s presnou cenovou ponukou</h3>
+                        <div class="row">
+                            <div class="wrapper">
+                                <span>Meno a priezvisko</span>
+                                <input type="text" name="name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="wrapper">
+                                <span>E-mail</span>
+                                <input type="email" name="email">
+                            </div>
+                            <div class="wrapper">
+                                <span>Miesto montáže</span>
+                                <input type="text" name="place">
+                            </div>
+                        </div>
+                        <button type="submit" class="button__classic">Potvrdiť nezáväzne</button>
+                    </form>
+                </div>
         </section>
     </main>
 
@@ -113,6 +152,5 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 
 </html>
