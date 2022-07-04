@@ -354,7 +354,7 @@ section {
 .container__contact {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
 }
 
@@ -368,11 +368,18 @@ section {
   width: 100%;
 }
 
+.form__contact h2 {
+  margin-right: auto;
+}
+
+.form__contact a {
+  color: #F37528;
+}
+
 .form__contact .row {
   display: flex;
   gap: 1rem;
   align-items: center;
-  justify-content: center;
   width: 100%;
 }
 
