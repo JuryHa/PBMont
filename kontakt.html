@@ -38,22 +38,44 @@
             </div>
         </section>
         <section>
-            <div class="container">
-                <form method="post" action="mailSend.php">
-
-
-                    <textarea name="message"></textarea>
-
-
-                    <input type="submit">
-
-
+            <div class="container container__contact">
+                <div class="logo">
+                    <img src="assets/images/logo_pbMont_big.svg" alt="">
+                </div>
+                <form class="form__contact" method="post" action="mailSend.php">
+                    <div class="row">
+                        <h2>Kontaktujte nás</h2>
+                    </div>
+                    <div class="row">
+                        <div class="wrapper">
+                            <label for="name">Vaše meno</label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+                        <div class="wrapper">
+                            <label for="email">Váš email</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="wrapper">
+                            <label for="message">Vaša správa</label>
+                            <textarea name="message" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="checkbox" name="policy" id="policy" required>
+                        <label for="policy">Súhlasím so <a>spracovaním osobných údajov</a></label>
+                    </div>
+                    <button class="button__classic" type="submit">Odoslať</button>
                 </form>
             </div>
         </section>
     </main>
 
     <footer>
+        <div class="container container__map">
+            <img src="assets/images/image_map.svg" alt="">
+        </div>
         <div class="container">
             <div class="top">
                 <div class="contact">

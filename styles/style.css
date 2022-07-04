@@ -351,10 +351,68 @@ section {
   border-color: #EEEDDE;
 }
 
+.container__contact {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container__contact img {
+  width: 100%;
+}
+
+.form__contact {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+}
+
+.form__contact .row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.form__contact .wrapper {
+  display: grid;
+  flex: 1;
+}
+
+.form__contact input:not([type="checkbox"]),
+.form__contact textarea {
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(30, 30, 30, 0.55);
+}
+
+.form__contact textarea {
+  resize: none;
+  height: 150px;
+}
+
+.form__contact button.button__classic {
+  margin: initial;
+  margin-right: auto;
+}
+
 footer {
   background-color: #F5E3BD;
   position: relative;
   padding-bottom: 4rem;
+}
+
+footer .container__map {
+  padding-bottom: 0 !important;
+}
+
+footer .container__map > img {
+  width: 100%;
+  border-radius: 12px;
 }
 
 footer > .container {
@@ -897,6 +955,9 @@ form button {
   }
   .calculator__step .calculator__products {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .container__contact .logo {
+    display: none;
   }
 }
 

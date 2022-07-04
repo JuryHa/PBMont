@@ -165,6 +165,12 @@
     .calculator__step .calculator__products {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .container__contact {
+        .logo {
+            display: none;
+        }
+    }
 }
 
 
