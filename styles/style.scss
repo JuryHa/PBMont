@@ -30,14 +30,14 @@ h1 {
     color: $color_default_dark;
     font-weight: $fw_semiBold;
     line-height: 1.3;
-    font-size: 56px;
+    font-size: clamp(30px, 5vw, 56px);
 }
 
 h2 {
     color: $color_default_dark;
     font-weight: $fw_semiBold;
     line-height: 1.3;
-    font-size: 36px;
+    font-size: clamp(26px, 4vw, 36px);
 }
 
 h4 {
@@ -86,10 +86,18 @@ nav {
             transition: all 0.3s ease-in-out;
         }
 
+        &.active::after {
+            width: 20px;
+        }
+
+        &.active:hover::after {
+            width: 100%;
+        }
+
         &::after {
             content: '';
             height: 3px;
-            width: 20px;
+            width: 0;
             position: absolute;
             bottom: -0.375rem;
             left: 50%;
@@ -139,10 +147,10 @@ section {
 .grid__columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: clamp(2rem, 3vw, 3rem);
 
     .wrapper {
-        gap: 3rem;
+        gap: clamp(1rem, 3vw, 3rem);
         display: grid;
     }
 }
@@ -234,7 +242,7 @@ section {
 
     .stats {
         display: flex;
-        gap: 2rem;
+        gap: clamp(1rem, 3vw, 3rem);
 
         span {
             display: flex;
@@ -256,13 +264,13 @@ section {
 #survey {
     .container {
         display: grid;
-        gap: 3rem;
+        gap: clamp(1rem, 3vw, 2rem);
     }
 
     .steps {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
+        gap: clamp(1rem, 3vw, 2rem);
 
         .step {
             display: grid;
