@@ -19,6 +19,10 @@ p {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   color: #1E1E1E;
   font-weight: 600;
@@ -40,6 +44,7 @@ h4 {
 header {
   display: flex;
   background-color: #F5E3BD;
+  min-height: 4rem;
 }
 
 header .container {
@@ -502,6 +507,10 @@ footer .bottom .socials a {
 }
 
 /* BREADCRUMBS */
+#breadcrumbs {
+  padding: 1rem 0 4rem;
+}
+
 #breadcrumbs .container {
   grid-template-columns: 1fr;
 }
@@ -626,7 +635,7 @@ form button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  align-items: center;
+  align-items: baseline;
 }
 
 .calculator__step .calculator__products .calculator__product {
@@ -941,6 +950,9 @@ form button {
   .container {
     padding: 1rem 2rem;
   }
+  #breadcrumbs {
+    padding: 2rem 0;
+  }
   #main .stats span {
     font-size: 24px;
   }
@@ -972,6 +984,9 @@ form button {
   section {
     padding: 2rem 0 4rem;
   }
+  .container {
+    padding: 1rem;
+  }
   #main .stats {
     flex-direction: column;
   }
@@ -989,6 +1004,9 @@ form button {
     right: 5%;
     left: auto;
     z-index: 10;
+  }
+  footer .container {
+    padding-inline: 1rem;
   }
   footer .top .wrapper {
     flex-direction: column;

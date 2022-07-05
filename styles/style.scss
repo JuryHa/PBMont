@@ -22,6 +22,10 @@ p {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     color: $color_default_dark;
     font-weight: $fw_semiBold;
@@ -43,6 +47,7 @@ h4 {
 header {
     display: flex;
     background-color: $color_secondary_dark;
+    min-height: 4rem;
 
     .container {
         padding: 1rem;
@@ -514,6 +519,8 @@ footer {
 
 /* BREADCRUMBS */
 #breadcrumbs {
+    padding: 1rem 0 4rem;
+
     .container {
         grid-template-columns: 1fr;
     }
@@ -650,7 +657,7 @@ form {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
-        align-items: center;
+        align-items: baseline;
 
         .calculator__product {
             display: grid;

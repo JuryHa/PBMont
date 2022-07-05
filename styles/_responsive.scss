@@ -133,6 +133,10 @@
         padding: 1rem 2rem;
     }
 
+    #breadcrumbs {
+        padding: 2rem 0;
+    }
+
     #main .stats {
         span {
             font-size: 24px;
@@ -179,6 +183,10 @@
         padding: 2rem 0 4rem;
     }
 
+    .container {
+        padding: 1rem;
+    }
+
     #main .stats {
         flex-direction: column;
     }
@@ -203,6 +211,10 @@
     }
 
     footer {
+        .container {
+            padding-inline: 1rem;
+        }
+
         .top {
             .wrapper {
                 flex-direction: column;
