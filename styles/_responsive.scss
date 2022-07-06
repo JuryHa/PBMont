@@ -181,13 +181,18 @@
         flex-direction: column;
     }
 
+    #survey .steps .step,
     .calculator__step,
-    #survey .steps .step {
+    .recap {
         padding: 1rem;
 
         span:before {
             left: -1rem;
         }
+    }
+
+    .recap .wrapper {
+        padding: 1rem;
     }
 
     .images__group {
@@ -237,14 +242,18 @@
 
     .form__contact {
         gap: 1rem;
-
-        .mobile__column {
-            flex-direction: column;
-        }
     }
 
     .calculator__step .calculator__products {
         gap: 1rem;
+    }
+
+    .mobile__column {
+        flex-direction: column;
+
+        .wrapper {
+            width: 100% !important;
+        }
     }
 }
 

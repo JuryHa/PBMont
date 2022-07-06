@@ -163,7 +163,7 @@ section {
   margin-top: 1rem;
 }
 
-.images__group img {
+.images__group .container__image {
   width: 50%;
   max-width: 300px;
   max-height: 100%;
@@ -173,13 +173,19 @@ section {
   transform: translateY(-50%);
   z-index: 20;
   border-radius: 12px;
+  display: flex;
+  overflow: hidden;
 }
 
-.images__group img:nth-child(1) {
+.images__group .container__image img {
+  width: 100%;
+}
+
+.images__group .container__image:nth-child(1) {
   box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3);
 }
 
-.images__group img:nth-child(2) {
+.images__group .container__image:nth-child(2) {
   top: 45%;
   right: 5%;
   left: auto;
@@ -316,11 +322,15 @@ section {
   gap: 1rem;
 }
 
-#references .swiper-slide img {
+#references .swiper-slide .container__image {
+  border-radius: 12px;
   display: flex;
-  border-radius: 10px;
   overflow: hidden;
+}
+
+#references .swiper-slide .container__image img {
   width: 100%;
+  display: flex;
 }
 
 #references .swiper__navigation {
@@ -376,7 +386,14 @@ section {
   gap: 2rem;
 }
 
-.container__contact img {
+.container__contact .container__image {
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container__contact .container__image img {
   width: 100%;
 }
 
@@ -546,6 +563,23 @@ footer .bottom .socials a {
   width: 100%;
 }
 
+#products .container__image {
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#products .container__image img {
+  width: 100%;
+  display: flex;
+}
+
+#products .swiper {
+  width: 800px;
+  height: 100%;
+}
+
 #products .swiper__container {
   position: fixed;
   width: 100%;
@@ -568,6 +602,7 @@ footer .bottom .socials a {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: auto;
 }
 
 #products .swiper-button-prev,
@@ -649,7 +684,7 @@ form button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  align-items: baseline;
+  align-items: flex-start;
 }
 
 .calculator__step .calculator__products .calculator__product {
@@ -658,8 +693,17 @@ form button {
   flex: 1;
 }
 
-.calculator__step .calculator__products .calculator__product img {
+.calculator__step .calculator__products .calculator__product .container__image {
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+}
+
+.calculator__step .calculator__products .calculator__product .container__image img {
   width: 100%;
+  display: flex;
+  object-fit: cover;
 }
 
 .calculator__step .calculator__products input {
@@ -689,6 +733,10 @@ form button {
 .container__smallGates {
   display: grid;
   gap: 1rem;
+}
+
+.calculator__smallGates .addButton {
+  margin-top: -1rem;
 }
 
 .calculator__accordion {
@@ -808,7 +856,7 @@ form button {
 .recap h3 {
   position: relative;
   cursor: pointer;
-  font-size: 36px;
+  font-size: clamp(20px, 4vw, 36px);
   font-weight: 600;
 }
 
@@ -999,13 +1047,18 @@ form button {
   #main .stats {
     flex-direction: column;
   }
+  #survey .steps .step,
   .calculator__step,
-  #survey .steps .step {
+  .recap {
     padding: 1rem;
   }
+  #survey .steps .step span:before,
   .calculator__step span:before,
-  #survey .steps .step span:before {
+  .recap span:before {
     left: -1rem;
+  }
+  .recap .wrapper {
+    padding: 1rem;
   }
   .images__group {
     height: 480px;
@@ -1040,11 +1093,14 @@ form button {
   .form__contact {
     gap: 1rem;
   }
-  .form__contact .mobile__column {
-    flex-direction: column;
-  }
   .calculator__step .calculator__products {
     gap: 1rem;
+  }
+  .mobile__column {
+    flex-direction: column;
+  }
+  .mobile__column .wrapper {
+    width: 100% !important;
   }
 }
 

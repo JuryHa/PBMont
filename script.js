@@ -67,6 +67,8 @@ if (addNewSmallButton != null) {
         const containerSmallGates = document.querySelector('.container__smallGates');
         let counter = 2;
         renderNewCalcElement(gatesArray.length, 'smallGate', uuidv4(), 'Bránička', containerSmallGates, deleteSmallGateHandler);
+
+        addNewSmallButton.style.marginTop = "0";
     })
 }
 
@@ -276,6 +278,7 @@ const deleteGateHandler = (gateId) => {
 const deleteSmallGateHandler = (smallGateId) => {
     console.log('clicked Item: ' + smallGateId);
     console.log('gatesArray:' + gatesArray.length);
+
     let gateIndex = 0;
 
     for (const gate of gatesArray) {
@@ -293,6 +296,10 @@ const deleteSmallGateHandler = (smallGateId) => {
     // console.log('gateIndex: ' + gatesList[gateIndex]);
     console.log(smallGatesListItems);
     smallGatesListItems[gateIndex].remove();
+
+    if (smallGatesListItems.length < 2) {
+        addNewSmallButton.style.marginTop = "-1rem";
+    }
 }
 
 
