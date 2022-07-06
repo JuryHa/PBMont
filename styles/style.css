@@ -144,7 +144,7 @@ section {
 .grid__columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 3vw, 3rem);
+  gap: clamp(1rem, 2vw, 2rem);
 }
 
 .grid__columns .wrapper {
@@ -155,6 +155,7 @@ section {
 .images__group {
   display: flex;
   position: relative;
+  margin-top: 1rem;
 }
 
 .images__group img {
@@ -699,7 +700,7 @@ form button {
 .calculator__accordion h3 {
   position: relative;
   cursor: pointer;
-  font-size: 36px;
+  font-size: clamp(26px, 4vw, 36px);
   font-weight: 600;
 }
 
@@ -858,6 +859,12 @@ form button {
 
 /* RESPONSIVE */
 @media screen and (max-width: 992px) {
+  .container__withImages .wrapper:last-of-type {
+    grid-row: 1;
+  }
+  .container__withImages .images__group img {
+    box-shadow: none;
+  }
   #main .stats {
     justify-content: center;
   }
@@ -869,9 +876,6 @@ form button {
   }
   #main .stats b {
     font-size: 48px;
-  }
-  #how-to-decide .grid__columns .wrapper:nth-child(2) {
-    grid-row: 1;
   }
   .grid__columns {
     grid-template-columns: 1fr;
@@ -914,11 +918,9 @@ form button {
     padding: 1rem;
     min-height: 4rem;
     position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    width: calc(100% - 2rem);
+    top: 1rem;
+    left: 1rem;
     z-index: 50;
   }
   nav img {
@@ -939,7 +941,7 @@ form button {
     align-items: center;
     padding: 4rem 2rem;
     border-radius: 12px;
-    gap: 4rem;
+    gap: 3rem;
     display: none;
   }
   nav ul.visible {
@@ -1040,6 +1042,6 @@ form button {
 
 @media screen and (max-width: 400px) {
   .images__group {
-    height: 360px;
+    height: 320px;
   }
 }
