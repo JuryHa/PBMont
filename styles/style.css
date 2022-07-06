@@ -62,6 +62,11 @@ nav {
   border-radius: 12px;
 }
 
+nav .logo {
+  display: grid;
+  place-items: center;
+}
+
 nav ul {
   display: flex;
   padding: 0.5rem;
@@ -74,26 +79,26 @@ nav li {
   display: flex;
 }
 
-nav a {
+nav a:not(.logo) {
   color: #FFFFFF;
   text-decoration: none;
   position: relative;
 }
 
-nav a:hover::after {
+nav a:not(.logo):hover::after {
   width: 100%;
   transition: all 0.3s ease-in-out;
 }
 
-nav a.active::after {
+nav a:not(.logo).active::after {
   width: 20px;
 }
 
-nav a.active:hover::after {
+nav a:not(.logo).active:hover::after {
   width: 100%;
 }
 
-nav a::after {
+nav a:not(.logo)::after {
   content: '';
   height: 3px;
   width: 0;
@@ -923,11 +928,10 @@ form button {
     left: 1rem;
     z-index: 50;
   }
-  nav img {
+  nav .logo {
     margin-right: auto;
     position: absolute;
     top: 1rem;
-    height: 32px;
   }
   nav ul {
     height: 100%;
