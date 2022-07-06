@@ -236,8 +236,7 @@ section {
     cursor: pointer;
 
     &:hover {
-        color: black;
-        transition: all 0.3s ease-in-out;
+        background-color: #d65100;
     }
 }
 
@@ -728,7 +727,7 @@ form {
     h3 {
         position: relative;
         cursor: pointer;
-        font-size: clamp(26px, 4vw, 36px);
+        font-size: clamp(20px, 4vw, 36px);
         font-weight: $fw_semiBold;
 
         &::after {

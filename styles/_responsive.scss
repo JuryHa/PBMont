@@ -101,9 +101,9 @@
             left: 0;
             flex-direction: column;
             align-items: center;
-            padding: 4rem 2rem;
+            padding: 1rem;
             border-radius: $br_medium;
-            gap: 3rem;
+            gap: 2rem;
             display: none;
 
             &.visible {
@@ -181,6 +181,15 @@
         flex-direction: column;
     }
 
+    .calculator__step,
+    #survey .steps .step {
+        padding: 1rem;
+
+        span:before {
+            left: -1rem;
+        }
+    }
+
     .images__group {
         height: 480px;
 
@@ -234,9 +243,9 @@
         }
     }
 
-    // .calculator__step .calculator__products {
-    //     grid-template-columns: 1fr;
-    // }
+    .calculator__step .calculator__products {
+        gap: 1rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
