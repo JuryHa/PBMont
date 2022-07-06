@@ -47,7 +47,8 @@
     footer {
         .contact {
             .card {
-                padding: 1rem;
+                padding: 2rem 1rem;
+                gap: 1rem;
 
                 .inner {
                     flex-direction: column;
@@ -206,10 +207,6 @@
         }
     }
 
-    #products .container {
-        grid-template-columns: 1fr
-    }
-
     .calculator__accordion .info {
         .row {
             flex-direction: column;
@@ -221,6 +218,14 @@
 
         .grid {
             grid-template-columns: 1fr;
+        }
+    }
+
+    .form__contact {
+        gap: 1rem;
+
+        .mobile__column {
+            flex-direction: column;
         }
     }
 

@@ -399,6 +399,7 @@ section {
 .form__contact .wrapper {
   display: grid;
   flex: 1;
+  width: 100%;
 }
 
 .form__contact input:not([type="checkbox"]),
@@ -430,7 +431,7 @@ footer .container__map {
   padding-bottom: 0 !important;
 }
 
-footer .container__map > img {
+footer .container__map iframe {
   width: 100%;
   border-radius: 12px;
 }
@@ -679,6 +680,12 @@ form button {
   cursor: pointer;
 }
 
+.container__gates,
+.container__smallGates {
+  display: grid;
+  gap: 1rem;
+}
+
 .calculator__accordion {
   background-color: #F5E3BD;
   padding: 1rem;
@@ -887,7 +894,8 @@ form button {
     left: 0;
   }
   footer .contact .card {
-    padding: 1rem;
+    padding: 2rem 1rem;
+    gap: 1rem;
   }
   footer .contact .card .inner {
     flex-direction: column;
@@ -1007,9 +1015,6 @@ form button {
   footer .top .wrapper {
     flex-direction: column;
   }
-  #products .container {
-    grid-template-columns: 1fr;
-  }
   .calculator__accordion .info .row {
     flex-direction: column;
   }
@@ -1018,6 +1023,12 @@ form button {
   }
   .calculator__accordion .info .grid {
     grid-template-columns: 1fr;
+  }
+  .form__contact {
+    gap: 1rem;
+  }
+  .form__contact .mobile__column {
+    flex-direction: column;
   }
 }
 

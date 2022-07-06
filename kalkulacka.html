@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulačka | PBMont</title>
     <link rel="shortcut icon" href="assets/images/logo_pbMont.svg" type="image/x-icon">
-    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -67,106 +68,91 @@
                                 <span>Výplň tahokov</span>
                             </label>
                         </div>
+                        <div class="calculator__product">
+                            <input type="radio" name="calc_fencing" id="calc_fencing_4"
+                                value="oplotenie_vyplnZTvrdenehoSkla">
+                            <label for="calc_fencing_4">
+                                <img src="assets/images/image_type_vyplnTahokov.png" alt="">
+                                <span>Výplň z tvrdeného skla</span>
+                            </label>
+                        </div>
                     </div>
                 </div>
 
-                <div class="calculator__step">
+                <div class="calculator__step calculator__gates">
                     <span>Krok 2</span>
                     <h2>Brány</h2>
                     <p>Vyberte si preferovaný typ brány a zvoľte jej rozmery:</p>
-                    <div class="calculator__accordion gate active">
-                        <div class="tile">
-                            <h3>Brána</h3>
-                        </div>
-                        <div class="info">
-                            <div class="row">
-                                <div class="wrapper">
-                                    <span>Počet kusov</span>
-                                    <input type="number" name="calc_gate_1_count" id="calc_gate_1_count" required>
-                                </div>
+                    <div class="container__gates">
+                        <div class="calculator__accordion gate active">
+                            <div class="tile">
+                                <h3>Brána</h3>
                             </div>
-                            <div class="row">
-                                <div class="wrapper">
-                                    <span>Výška (cm)</span>
-                                    <p>Zadajte hodnotu medzi 0cm - 220cm</p>
-                                    <input type="number" name="calc_gate_1_height" id="calc_gate_1_height" pattern="\d+"
-                                        step="1" min="0" max="220" required>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="wrapper">
+                                        <span>Počet kusov</span>
+                                        <input type="number" name="calc_gate_1_count" id="calc_gate_1_count" required>
+                                    </div>
                                 </div>
-                                <div class="wrapper">
-                                    <span>Šírka (cm)</span>
-                                    <p>Zadajte hodnotu medzi 0cm - 600cm</p>
-                                    <input type="number" name="calc_gate_1_width" id="calc_gate_1_width" pattern="\d+"
-                                        step="1" min="0" max="600" required>
+                                <div class="row">
+                                    <div class="wrapper">
+                                        <span>Výška (cm)</span>
+                                        <p>Zadajte hodnotu medzi 0cm - 220cm</p>
+                                        <input type="number" name="calc_gate_1_height" id="calc_gate_1_height"
+                                            pattern="\d+" step="1" min="0" max="220" required>
+                                    </div>
+                                    <div class="wrapper">
+                                        <span>Šírka (cm)</span>
+                                        <p>Zadajte hodnotu medzi 0cm - 600cm</p>
+                                        <input type="number" name="calc_gate_1_width" id="calc_gate_1_width"
+                                            pattern="\d+" step="1" min="0" max="600" required>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row types">
-                                <span>Typy brán</span>
-                                <div class="grid">
-                                    <div class="wrapper">
-                                        <input type="radio" id="calc_gate_1_type_1" name="calc_gate_1_type"
-                                            value="samonosna">
-                                        <label for="calc_gate_1_type_1">Samonosná</label>
-                                    </div>
-                                    <div class="wrapper">
-                                        <input type="radio" id="calc_gate_1_type_2" name="calc_gate_1_type"
-                                            value="kolajova">
-                                        <label for="calc_gate_1_type_2">Koľajová</label>
-                                    </div>
-                                    <div class="wrapper">
-                                        <input type="radio" id="calc_gate_1_type_3" name="calc_gate_1_type"
-                                            value="kridlova">
-                                        <label for="calc_gate_1_type_3">Krídlová</label>
-                                    </div>
-                                    <div class="wrapper">
-                                        <input type="radio" id="calc_gate_1_type_4" name="calc_gate_1_type"
-                                            value="kridlovaNaHlinikovychStlpoch">
-                                        <label for="calc_gate_1_type_4">Krídlová na hliníkových stĺpoch</label>
+                                <div class="row types">
+                                    <span>Typy brán</span>
+                                    <div class="grid">
+                                        <div class="wrapper">
+                                            <input type="radio" id="calc_gate_1_type_1" name="calc_gate_1_type"
+                                                value="samonosna">
+                                            <label for="calc_gate_1_type_1">Samonosná</label>
+                                        </div>
+                                        <div class="wrapper">
+                                            <input type="radio" id="calc_gate_1_type_2" name="calc_gate_1_type"
+                                                value="kolajova">
+                                            <label for="calc_gate_1_type_2">Koľajová</label>
+                                        </div>
+                                        <div class="wrapper">
+                                            <input type="radio" id="calc_gate_1_type_3" name="calc_gate_1_type"
+                                                value="kridlova">
+                                            <label for="calc_gate_1_type_3">Krídlová</label>
+                                        </div>
+                                        <div class="wrapper">
+                                            <input type="radio" id="calc_gate_1_type_4" name="calc_gate_1_type"
+                                                value="kridlovaNaHlinikovychStlpoch">
+                                            <label for="calc_gate_1_type_4">Krídlová na hliníkových stĺpoch</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="calculator__accordion gate">
+                    <div class="calculator__accordion addButton">
                         <div class="tile">
-                            <h3>Brána</h3>
-                        </div>
-                        <div class="info">
-                            <div class="row">
-                                <div class="wrapper">
-                                    <span>Počet kusov</span>
-                                    <input type="number" name="calc_gate_2_count" id="calc_gate_2_count">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="wrapper">
-                                    <span>Výška (cm)</span>
-                                    <p>Zadajte hodnotu medzi 0cm - 220cm</p>
-                                    <input type="number" name="calc_gate_2_height" id="calc_gate_2_height" pattern="\d+"
-                                        step="1" min="0" max="220">
-                                </div>
-                                <div class="wrapper">
-                                    <span>Šírka (cm)</span>
-                                    <p>Zadajte hodnotu medzi 0cm - 600cm</p>
-                                    <input type="number" name="calc_gate_2_width" id="calc_gate_2_width" pattern="\d+"
-                                        step="1" min="0" max="600">
-                                </div>
-                            </div>
+                            <h3>Pridať bránu</h3>
                         </div>
                     </div>
                 </div>
 
-                <div class="calculator__step">
+                <div class="calculator__step calculator__smallGates">
                     <span>Krok 3</span>
                     <h2>Bráničky</h2>
                     <p>Vyberte si preferovaný typ bráničky a zvoľte jej rozmery:</p>
-                    <div class="calculator__accordion gate">
+                    <div class="container__smallGates">
+                    </div>
+                    <div class="calculator__accordion addButton">
                         <div class="tile">
-                            <h3>Bránička</h3>
-                        </div>
-                        <div class="info">
-                            <div class="row">
-                                ...
-                            </div>
+                            <h3>Pridať bráničku</h3>
                         </div>
                     </div>
                 </div>

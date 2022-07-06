@@ -408,6 +408,7 @@ section {
     .wrapper {
         display: grid;
         flex: 1;
+        width: 100%;
     }
 
 
@@ -439,7 +440,7 @@ footer {
     .container__map {
         padding-bottom: 0 !important;
 
-        >img {
+        iframe {
             width: 100%;
             border-radius: $br_medium;
         }
@@ -700,6 +701,12 @@ form {
             cursor: pointer;
         }
     }
+}
+
+.container__gates,
+.container__smallGates {
+    display: grid;
+    gap: 1rem;
 }
 
 .calculator__accordion {
