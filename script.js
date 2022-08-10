@@ -175,7 +175,7 @@ const renderNewCalcElement2 = (iterator, selector) => {
                 <span>Typy brán</span>
                 <div class="grid">
                     <div class="wrapper">
-                        <input type="radio" name="gate_type_${iterator}" id="gate_${iterator}_type_1" value="1" />
+                        <input type="radio" name="gate_type_${iterator}" id="gate_${iterator}_type_1" value="1" required />
                         <label for="gate_${iterator}_type_1">Samonosná</label>
                     </div>
                     <div class="wrapper">
